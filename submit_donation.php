@@ -3,6 +3,13 @@
 <head>
     <title>DonationHero - Submit Donation</title>
     <link rel="stylesheet" href="/styles.css">
+    <style>
+        h2{
+            text-align: center;
+            margin: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
 </head>
 <body>
 
@@ -44,9 +51,9 @@
         $stmt->bind_param("iiiiii", $money, $clothes, $food, $others, $donation_amount, $points);
 
         if ($stmt->execute()) {
-            echo "Thank you for donating!";
+            echo "<h2>Thank you for donating!</h2>";
         } else {
-            echo "There was a problem with your donation.";
+            echo "<h2>There was a problem with your donation.</h2>";
         }
 
         $stmt->close();
