@@ -5,45 +5,43 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <!-- Your navigation bar here -->
-    </nav>
 
     <?php
-    include 'config.php'; 
+    // Database connection details
+    include 'config.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $type1 = isset($_POST['type1']) ? 1 : 0;
-        $type2 = isset($_POST['type2']) ? 1 : 0;
-        $type3 = isset($_POST['type3']) ? 1 : 0;
-        $type4 = isset($_POST['type4']) ? 1 : 0;
+        $money = isset($_POST['money']) ? 1 : 0;
+        $clothes = isset($_POST['clothes']) ? 1 : 0;
+        $food = isset($_POST['food']) ? 1 : 0;
+        $others = isset($_POST['others']) ? 1 : 0;
         $donation_amount = $_POST['donation-amount'];
 
         $points = 0;
-        if ($type1) {
+        if ($money) {
             $points += 10;
-        }
-        else if ($type2) {
+        } 
+        elseif ($clothes) { 
             $points += 5;
         }
-        else if ($type3) {
+        elseif ($food) {
             $points += 3;
         }
-        else if ($type4) {
-            $points += 2;
+        elseif ($others) {
+            $points += 1;
         }
-        else {
-            $points += 0;
+        else{}
+
+        // Create connection
+        $conn = new mysqli($_servername, $_username, $_password, $_database);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
 
-        $mysqli = new mysqli($_servername, $_username, $_password, $_database);
-
-        if ($mysqli->connect_error) {
-            die("Connection failed: " . $mysqli->connect_error);
-        }
-
-        $stmt = $mysqli->prepare("INSERT INTO donations (type1, type2, type3, type4, donation_amount) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("iiiii", $type1, $type2, $type3, $type4, $donation_amount);
+        $stmt = $conn->prepare("INSERT INTO donations (money , clothes, food, others, donation_amount, points) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("iiiiii", $money, $clothes, $food, $others, $donation_amount, $points);
 
         if ($stmt->execute()) {
             echo "Thank you for donating!";
@@ -52,8 +50,9 @@
         }
 
         $stmt->close();
-        $mysqli->close();
+        $conn->close();
     }
     ?>
+
 </body>
 </html>
