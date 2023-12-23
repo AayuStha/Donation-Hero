@@ -18,6 +18,8 @@
     include 'config.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $donor_name = $_POST['donor-name'];
+        $donor_email = $_POST['donor-email'];
         $money = isset($_POST['money']) ? 1 : 0;
         $clothes = isset($_POST['clothes']) ? 1 : 0;
         $food = isset($_POST['food']) ? 1 : 0;
@@ -47,13 +49,26 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $stmt = $conn->prepare("INSERT INTO donations (money , clothes, food, others, donation_amount, points) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("iiiiii", $money, $clothes, $food, $others, $donation_amount, $points);
+        // Check if a record with the same email already exists
+        $stmt = $conn->prepare("SELECT * FROM donations WHERE donor_email = ?");
+        $stmt->bind_param("s", $donor_email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            // If a record exists, update it
+            $stmt = $conn->prepare("UPDATE donations SET donation_amount = donation_amount + ?, points = points + ? WHERE donor_email = ?");
+            $stmt->bind_param("iis", $donation_amount, $points, $donor_email);
+        } else {
+            // If no record exists, insert a new one
+            $stmt = $conn->prepare("INSERT INTO donations (donor_name, donor_email, donation_amount, points) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("ssii", $donor_name, $donor_email, $donation_amount, $points);
+        }
 
         if ($stmt->execute()) {
-            echo "<h2>Thank you for donating!</h2>";
+            echo "<p style='color: green; font-size: 20px; font-weight: bold;'>Thank you for donating!</p>";
         } else {
-            echo "<h2>There was a problem with your donation.</h2>";
+            echo "<p style='color: red; font-size: 20px; font-weight: bold;'>There was a problem with your donation.</p>";
         }
 
         $stmt->close();
