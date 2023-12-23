@@ -3,6 +3,21 @@
 <head>
     <title>DonationHero</title>
     <link rel="stylesheet" href="/styles.css">
+    <style>
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        .event {
+            animation: fadeIn 1s ease-in-out;
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        .event:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">

@@ -21,12 +21,16 @@
     </nav>
 
     <div class="donation-form-container">
-        <img src="logo.png" alt="Logo" class="logo"> <!-- Logo at the top -->
-    
         <div class="donation-form-grid">
-            <form class="donation-form">
+            <form class="donation-form" action="submit_donation.php" method="post">
                 <h1>Title</h1>
                 <p>Description</p>
+    
+                <label for="donor-name">Your Name:</label><br>
+                <input type="text" id="donor-name" name="donor-name"><br>
+    
+                <label for="donor-email">Your Email:</label><br>
+                <input type="email" id="donor-email" name="donor-email"><br>
     
                 <label for="donation-type">Type of Donation:</label><br>
                 <input type="checkbox" id="type1" name="type1" value="Type1">
