@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -506,4 +507,34 @@ p b{
 
 .signup-form .name-field input {
     width: 48%;
+}
+
+/* Leaderboard */
+.donation-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.money-donation, .clothes-donation {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+.money-donation table, .clothes-donation table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.money-donation th, .money-donation td, .clothes-donation th, .clothes-donation td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.money-donation th, .clothes-donation th {
+    background-color: #f2f2f2;
 }
