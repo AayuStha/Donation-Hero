@@ -8,6 +8,8 @@
 <body>
 
     <?php
+    include 'config.php'; 
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $fullname = $_POST["fullname"];
         $phone = $_POST["phone"];
@@ -16,7 +18,7 @@
         $subject = $_POST["subject"];
         $message = $_POST["message"];
     
-        $mysqli = new mysqli("localhost", "root", "", "contactForm");
+        $mysqli = new mysqli($_servername, $_username , $_password, $_database);
     
         if ($mysqli->connect_error) {
             die("Connection failed: " . $mysqli->connect_error);

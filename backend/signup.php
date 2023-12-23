@@ -20,6 +20,7 @@
         </ul>
     </nav>
     <?php
+    include 'config.php';
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $firstname = $_POST["firstname"];
         $lastname = $_POST["lastname"];
@@ -33,14 +34,15 @@
             exit;
         }
 
-        $mysqli = new mysqli("localhost", "root", "", "signup");
+        $mysqli = new mysqli($_servername, $_username, $_password, $_database);
 
         if ($mysqli->connect_error) {
             die("Connection failed: " . $mysqli->connect_error);
         }
 
         $stmt = $mysqli->prepare("INSERT INTO Users (firstname, lastname, email, number, password) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssss", $firstname, $lastname, $email, $number, $password);
+        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+        $stmt->bind_param("sssss", $firstname, $lastname, $email, $number, $hashed_password);
 
 
         if ($stmt->execute()) {
