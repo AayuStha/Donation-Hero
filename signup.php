@@ -13,7 +13,7 @@
             <li><a href="/index.html">Home</a></li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/events.html">Events</a></li>
-            <li><a href="/leaderboard.html">Leaderboard</a></li>
+            <li><a href="https://localhost/donationhero/leaderboard.php">Leaderboard</a></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/login.html">Login</a></li>
             <li><a href="/signup.html">Sign Up</a></li>
