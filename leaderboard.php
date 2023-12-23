@@ -102,7 +102,7 @@
                     <li><a href="/about.html">About Us</a></li>
                     <li><a href="/contact.html">Contact Us</a></li>
                     <li><a href="/terms.html">Terms & Condition</a></li>
-                    <li><a href="/privacy.html">FAQ</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-column">
