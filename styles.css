@@ -593,3 +593,13 @@ p b{
     max-width: 100%;
     height: auto;
 }
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-section img {
+    max-width: 100%;
+    height: auto;
+}
