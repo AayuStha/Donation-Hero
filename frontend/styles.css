@@ -1,6 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 .navbar {
@@ -8,10 +14,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 20px 50px;
+    height: 120px;
     font-family: Arial, sans-serif;
-    border-bottom: 2px solid #000;
+    margin: 0  5%;
 }
 
 
@@ -71,6 +78,11 @@ nav a:hover {
     padding-left: 50px;
     position: relative;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+}
+
+.donation-section > *
+{
+    margin-left: 5%;
 }
 nav ul {
     display: flex;
@@ -223,8 +235,9 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 300px;
+    padding: 50px 150px;
 }
+  
 
 .copyright {
     text-align: center;
@@ -507,34 +520,4 @@ p b{
 
 .signup-form .name-field input {
     width: 48%;
-}
-
-/* Leaderboard */
-.donation-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
-}
-
-.money-donation, .clothes-donation {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #e0e0e0;
-    padding: 20px;
-}
-
-.money-donation table, .clothes-donation table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.money-donation th, .money-donation td, .clothes-donation th, .clothes-donation td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-.money-donation th, .clothes-donation th {
-    background-color: #f2f2f2;
 }
