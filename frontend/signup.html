@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup - DonationHero</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/frontend/index.html" class="logo">
+            <img src="/frontend/photos/logo.jpeg" alt="Logo">
+        </a>
+        <ul class="nav-items">
+            <li><a href="/frontend/index.html">Home</a></li>
+            <li><a href="/frontend/about.html">About</a></li>
+            <li><a href="/frontend/events.html">Events</a></li>
+            <li><a href="/frontend/leaderboard.html">Leaderboard</a></li>
+            <li><a href="/frontend/contact.html">Contact</a></li>
+            <li><a href="/frontend/login.html">Login</a></li>
+            <li><a href="/frontend/signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    
+<form class="signup-form" method="POST" action="http://localhost/DonationHero/backend/signup.php">
+    <h2>Sign Up</h2>
+    <div class="name-field">
+        <input type="text" name="firstname" placeholder="First Name" required> 
+        <input type="text" name="lastname" placeholder="Last Name" required> 
+    </div>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="number" placeholder="Number" required>
+    <input type="password" name="password" placeholder="Create Password" required>
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">By clicking Sign Up, you agree to our <a href="/frontend/terms.html">Terms</a> and that you have read our <a href="/frontend/privacy.html">Privacy Policy</a></label>
+    <button type="submit" id="signup-button">Sign Up</button>
+    <p>Already have an account? <a href="/frontend/login.html">Log in</a>.</p>
+
+</form>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook </a></li>
+                    <li><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/frontend/about.html">About Us</a></li>
+                    <li><a href="/frontend/contact.html">Contact Us</a></li>
+                    <li><a href="/frontend/termshtml">Terms & Condition</a></li>
+                    <li><a href="/frontend/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <img src="/frontend/photos/logo.jpeg" alt="Logo">
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 DonationHero. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
