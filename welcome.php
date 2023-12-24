@@ -68,7 +68,7 @@
         <div class="welcome-section">
             <h1>Welcome to Our Donation Site</h1>
             <p>Your contributions can make a difference. Start donating today!</p>
-            <a href="./donate.php" class="donate-button">Donate Now</a>
+            <a href="./events.html" class="donate-button">Donate Now</a>
         </div>
     </div>
     <footer>

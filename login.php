@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <nav class="navbar">
@@ -57,10 +58,10 @@
                     $_SESSION["user"] = $id;                         
                     
                     // Redirect user to welcome page
-                    header("location: welcome.php");
+                    header("location: index.html");
                 } else {
                     // Display an error message if password is not valid
-                    echo "Invalid username and password combination.";
+                    echo "<p style='color: green; text-align:center; font-size: 80px; color: #f44336;margin: 100px; font-weight: bold;'>Invalid username and password combination.</p>";
                 }
 
             }
