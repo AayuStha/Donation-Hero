@@ -39,17 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($money) {
         $points = 10;
     } 
-    elseif ($clothes) { 
+    if ($clothes) { 
         $points = 5;
     }
-    elseif ($food) {
+    if ($food) {
         $points = 3;
     }
-    elseif ($others) {
+    if ($others) {
         $points = 1;
-    }
-    else{
-
     }
 
     // Create connection

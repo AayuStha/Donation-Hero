@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>DonationHero</title>
-    <link rel="stylesheet" href="./tyles.css">
+    <link rel="stylesheet" href="./styles.css">
     <style>
         h2{
             text-align: center;
