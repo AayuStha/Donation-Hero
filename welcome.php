@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Welcome to Our Donation Site</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,24 +51,24 @@
 </head>
 <body>
 <nav class="navbar">
-        <a href="/index.html" class="logo">
-            <img src="/photos/logo.jpeg" alt="Logo">
+        <a href="./index.html" class="logo">
+            <img src="./photos/logo.jpeg" alt="Logo">
         </a>
         <ul class="nav-items">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="https://localhost/donationhero/leaderboard.php">Leaderboard</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/events.html">Events</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="/signup.html">Sign Up</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./leaderboard.php">Leaderboard</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./events.html">Events</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./signup.html">Sign Up</a></li>
         </ul>
     </nav>
     <div class="container">
         <div class="welcome-section">
             <h1>Welcome to Our Donation Site</h1>
             <p>Your contributions can make a difference. Start donating today!</p>
-            <a href="donate.php" class="donate-button">Donate Now</a>
+            <a href="./donate.php" class="donate-button">Donate Now</a>
         </div>
     </div>
     <footer>
@@ -85,14 +85,14 @@
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/contact.html">Contact Us</a></li>
-                    <li><a href="/terms.html">Terms & Condition</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./terms.html">Terms & Condition</a></li>
+                    <li><a href="./privacy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <img src="/photos/logo.jpeg" alt="Logo">
+                <img src="./photos/logo.jpeg" alt="Logo">
             </div>
             <div class="footer-column">
                 <h3>Newsletter</h3>

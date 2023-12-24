@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>DonationHero</title>
-    <link rel="stylesheet" href="https://localhost/donationhero/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <style>
         h2{
             text-align: center;
@@ -37,22 +37,21 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/index.html" class="logo">
-            <img src="https://localhost/donationhero/photos/logo.jpeg" alt="Logo">
+<nav class="navbar">
+        <a href="./index.html" class="logo">
+            <img src="./photos/logo.jpeg" alt="Logo">
         </a>
         <ul class="nav-items">
-            <li><a href="https://localhost/donationhero/index.html">Home</a></li>
-            <li><a href="https://localhost/donationhero/leaderboard.html">Leaderboard</a></li>
-            <li><a href="https://localhost/donationhero/about.html">About</a></li>
-            <li><a href="https://localhost/donationhero/events.html">Events</a></li>
-            <li><a href="https://localhost/donationhero/contact.html">Contact</a></li>
-            <li><a href="https://localhost/donationhero/login.html">Login</a></li>
-            <li><a href="https://localhost/donationhero/signup.html">Sign Up</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./leaderboard.php">Leaderboard</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./events.html">Events</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./signup.html">Sign Up</a></li>
         </ul>
     </nav>
-
-
+    
     <h2>Leaderboard</h2>
     <table>
     <tr>
@@ -84,6 +83,7 @@
         $conn->close();
         ?>
     </table>
+    
     <br>
     <footer>
         <div class="footer-container">
@@ -99,14 +99,14 @@
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/contact.html">Contact Us</a></li>
-                    <li><a href="/terms.html">Terms & Condition</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./terms.html">Terms & Condition</a></li>
+                    <li><a href="./privacy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <img src="https://localhost/donationhero/photos/logo.jpeg" alt="Logo">
+                <img src="./photos/logo.jpeg" alt="Logo">
             </div>
             <div class="footer-column">
                 <h3>Newsletter</h3>
