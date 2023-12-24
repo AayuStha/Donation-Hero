@@ -579,10 +579,11 @@ p b{
 }
 
 .donation-form input[type="submit"] {
-    padding: 10px 20px;
+    padding: 20px;
+    margin-bottom: 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #333;
+    border-radius: 50px;
+    background-color: #f44336;;
     color: #fff;
     cursor: pointer;
 }
@@ -592,9 +593,9 @@ p b{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 40px;
+    border: 2px solid #000;
+    border-radius: 10px;
 }
 
 .qr-code img {
